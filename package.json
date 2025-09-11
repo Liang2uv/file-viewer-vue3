@@ -1,0 +1,55 @@
+{
+  "name": "@liang2uv/file-viewer-vue3",
+  "version": "1.0.1",
+  "description": "vue3-仿微信的文件/图片预览组件，支持图片、txt、pdf、word、excel、ppt预览",
+  "main": "dist/lb-file-viewer.umd.js",
+  "module": "dist/lb-file-viewer.umd.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf deploy && rimraf dist && vite build",
+    "debug": "bash debug.sh",
+    "deploy": "bash deploy.sh"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "文件预览",
+    "图片预览"
+  ],
+  "author": "liang2uv",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Liang2uv/file-viewer-vue3.git"
+  },
+  "peerDependencies": {
+    "@vue-office/pdf": "^2.0.10",
+    "lodash-es": "^4.17.21",
+    "mime": "^4.0.6",
+    "vue": "^3.3.7"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "@vitejs/plugin-vue": "^4.4.0",
+    "@vitejs/plugin-vue-jsx": "^5.1.1",
+    "sass": "^1.69.5",
+    "typescript": "5.2.2",
+    "vite": "4.5.0",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vue-tsc": "^1.8.22"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
