@@ -3207,7 +3207,8 @@ const XB = { class: "file-viewer-container" }, zB = { class: "controls-left" }, 
   props: {
     visible: { type: Boolean, default: !1 },
     fileList: { default: () => [] },
-    initialIndex: { default: 0 }
+    initialIndex: { default: 0 },
+    teleport: { type: Boolean, default: !0 }
   },
   emits: ["close"],
   setup(o, { expose: u, emit: g }) {
@@ -3358,7 +3359,10 @@ const XB = { class: "file-viewer-container" }, zB = { class: "controls-left" }, 
     }), (y, I) => {
       var ue, ie, Be, de, pe;
       const M = Aa("Icon"), $e = Aa("el-button"), et = oB("loading");
-      return re(), Le(AB, { to: "body" }, [
+      return re(), Le(AB, {
+        to: "body",
+        disabled: l.teleport
+      }, [
         sB((re(), Ze("div", {
           class: Mr(["fm-file-preview-dialog", { "screen-full": z.value }]),
           style: Ge({
@@ -3559,7 +3563,7 @@ const XB = { class: "file-viewer-container" }, zB = { class: "controls-left" }, 
           [gB, y.visible],
           [et, ee.value]
         ])
-      ]);
+      ], 8, ["disabled"]);
     };
   }
 });
@@ -3568,7 +3572,7 @@ const uE = (o, u) => {
   for (const [l, m] of u)
     g[l] = m;
   return g;
-}, lE = /* @__PURE__ */ uE(cE, [["__scopeId", "data-v-0ab82347"]]), gE = (o, u) => {
+}, lE = /* @__PURE__ */ uE(cE, [["__scopeId", "data-v-5b27c596"]]), gE = (o, u) => {
   if (o.install = (g) => {
     for (const l of [o, ...Object.values(u ?? {})])
       g.component(l.name, l);

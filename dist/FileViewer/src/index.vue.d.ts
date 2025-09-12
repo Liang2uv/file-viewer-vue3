@@ -10,14 +10,6 @@ export interface FileInfo {
      * 文件名
      */
     name: string;
-    /**
-     * 文件大小（可选）
-     */
-    size?: number;
-    /**
-     * 文件类型（可选）
-     */
-    type?: string;
 }
 /**
  * LbFileViewer组件选项接口
@@ -38,6 +30,11 @@ export interface LbFileViewerOptions {
      * @binding
      */
     initialIndex?: number;
+    /**
+     * 是否使用teleport，默认true
+     * @binding
+     */
+    teleport?: boolean;
 }
 /**
  * LbFileViewer组件实例接口
@@ -86,5 +83,6 @@ declare const _default: import('vue').DefineComponent<LbFileViewerOptions, {
     visible: boolean;
     fileList: FileInfo[];
     initialIndex: number;
+    teleport: boolean;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
 export default _default;
