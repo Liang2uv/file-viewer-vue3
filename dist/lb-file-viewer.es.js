@@ -3379,6 +3379,22 @@ const XB = { class: "file-viewer-container" }, zB = { class: "controls-left" }, 
             height: `${q.value.height}px`
           })
         }, [
+          K("div", {
+            class: "resize-handle top",
+            onMousedown: I[0] || (I[0] = (Z) => je("top", Z))
+          }, null, 32),
+          K("div", {
+            class: "resize-handle right",
+            onMousedown: I[1] || (I[1] = (Z) => je("right", Z))
+          }, null, 32),
+          K("div", {
+            class: "resize-handle bottom",
+            onMousedown: I[2] || (I[2] = (Z) => je("bottom", Z))
+          }, null, 32),
+          K("div", {
+            class: "resize-handle left",
+            onMousedown: I[3] || (I[3] = (Z) => je("left", Z))
+          }, null, 32),
           K("div", XB, [
             K("div", {
               class: "controls",
@@ -3471,7 +3487,7 @@ const XB = { class: "file-viewer-container" }, zB = { class: "controls-left" }, 
             ], 4),
             K("div", {
               class: "image-container",
-              onWheel: I[2] || (I[2] = //@ts-ignore
+              onWheel: I[6] || (I[6] = //@ts-ignore
               (...Z) => Pr(ft) && Pr(ft)(...Z))
             }, [
               O.value === "image" ? (ee(), Ge("img", {
@@ -3482,8 +3498,8 @@ const XB = { class: "file-viewer-container" }, zB = { class: "controls-left" }, 
                 }),
                 class: "image-viewer",
                 draggable: "false",
-                onMousedown: I[0] || (I[0] = (Z) => Kt(Z)),
-                onMousemove: I[1] || (I[1] = (Z) => Wt(Z)),
+                onMousedown: I[4] || (I[4] = (Z) => Kt(Z)),
+                onMousemove: I[5] || (I[5] = (Z) => Wt(Z)),
                 onMouseup: Ct,
                 onMouseleave: Ct
               }, null, 44, tE)) : be("", !0),
@@ -3555,23 +3571,7 @@ const XB = { class: "file-viewer-container" }, zB = { class: "controls-left" }, 
                 ], 2)
               ])
             ], 32)
-          ]),
-          K("div", {
-            class: "resize-handle top",
-            onMousedown: I[3] || (I[3] = (Z) => je("top", Z))
-          }, null, 32),
-          K("div", {
-            class: "resize-handle right",
-            onMousedown: I[4] || (I[4] = (Z) => je("right", Z))
-          }, null, 32),
-          K("div", {
-            class: "resize-handle bottom",
-            onMousedown: I[5] || (I[5] = (Z) => je("bottom", Z))
-          }, null, 32),
-          K("div", {
-            class: "resize-handle left",
-            onMousedown: I[6] || (I[6] = (Z) => je("left", Z))
-          }, null, 32)
+          ])
         ], 6)), [
           [gB, y.visible],
           [he, te.value]
@@ -3585,7 +3585,7 @@ const gE = (o, u) => {
   for (const [l, m] of u)
     g[l] = m;
   return g;
-}, hE = /* @__PURE__ */ gE(lE, [["__scopeId", "data-v-437c0156"]]), fE = (o, u) => {
+}, hE = /* @__PURE__ */ gE(lE, [["__scopeId", "data-v-adbd367f"]]), fE = (o, u) => {
   if (o.install = (g) => {
     for (const l of [o, ...Object.values(u ?? {})])
       g.component(l.name, l);
