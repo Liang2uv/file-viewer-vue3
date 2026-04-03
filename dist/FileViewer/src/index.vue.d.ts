@@ -90,5 +90,8 @@ declare const _default: import('vue').DefineComponent<LbFileViewerOptions, {
     initialIndex: number;
     teleport: boolean;
     usePdfjs: boolean;
-}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
+}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {
+    containerRef: HTMLDivElement;
+    imageRef: HTMLImageElement;
+}, any>;
 export default _default;

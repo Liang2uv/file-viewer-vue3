@@ -13,7 +13,10 @@ declare const LbFileViewer: {
         initialIndex: number;
         teleport: boolean;
         usePdfjs: boolean;
-    }, false, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, any, import('vue').ComponentProvideOptions, {
+    }, false, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {
+        containerRef: HTMLDivElement;
+        imageRef: HTMLImageElement;
+    }, any, import('vue').ComponentProvideOptions, {
         P: {};
         B: {};
         D: {};
