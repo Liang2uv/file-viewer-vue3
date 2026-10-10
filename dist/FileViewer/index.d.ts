@@ -12,7 +12,6 @@ declare const LbFileViewer: {
         fileList: import('./src/index.vue').FileInfo[];
         initialIndex: number;
         teleport: boolean;
-        usePdfjs: boolean;
     }, false, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {
         containerRef: HTMLDivElement;
         imageRef: HTMLImageElement;
@@ -34,7 +33,6 @@ declare const LbFileViewer: {
         fileList: import('./src/index.vue').FileInfo[];
         initialIndex: number;
         teleport: boolean;
-        usePdfjs: boolean;
     }>;
     __isFragment?: undefined;
     __isTeleport?: undefined;
@@ -52,7 +50,6 @@ declare const LbFileViewer: {
     fileList: import('./src/index.vue').FileInfo[];
     initialIndex: number;
     teleport: boolean;
-    usePdfjs: boolean;
 }, {}, string, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, import('vue').ComponentProvideOptions> & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps & {
     install: () => void;
 };

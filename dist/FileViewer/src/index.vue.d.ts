@@ -36,10 +36,9 @@ export interface LbFileViewerOptions {
      */
     teleport?: boolean;
     /**
-     * 是否使用pdf.js作为预览pdf的插件，默认false
-     * @binding
+     * 自定义文件查看器函数
      */
-    usePdfjs?: boolean;
+    customFileViewer?: Function;
 }
 /**
  * LbFileViewer组件实例接口
@@ -89,7 +88,6 @@ declare const _default: import('vue').DefineComponent<LbFileViewerOptions, {
     fileList: FileInfo[];
     initialIndex: number;
     teleport: boolean;
-    usePdfjs: boolean;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {
     containerRef: HTMLDivElement;
     imageRef: HTMLImageElement;

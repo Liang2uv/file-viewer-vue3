@@ -64,6 +64,7 @@ pnpm i @liang2uv/file-viewer-vue3 -S
 | fileList       | FileInfo[]     | 文件信息列表                 | []        |
 | initialIndex   | number         | 初始显示文件的索引           | 0         |
 | teleport       | boolean        | 是否使用 teleport            | true      |
+| customFileViewer       | (file: FileInfo) => string | 自定义文件预览iframe的src地址            | -      |
 
 **FileInfo 类型说明：**
 
