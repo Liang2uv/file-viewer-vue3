@@ -1,4 +1,4 @@
-import Ra, { defineComponent as uB, ref as V, computed as dt, watch as ma, onMounted as lB, resolveComponent as de, resolveDirective as gB, openBlock as se, createBlock as qe, Teleport as hB, withDirectives as fB, createElementBlock as xe, normalizeClass as nn, normalizeStyle as Ke, createElementVNode as ce, createVNode as re, withModifiers as Ce, withCtx as pe, createCommentVNode as nt, toDisplayString as dB, unref as an, Fragment as Qa, createTextVNode as pB, vShow as IB, nextTick as vB } from "vue";
+import Ra, { defineComponent as uB, ref as X, computed as dt, watch as ma, onMounted as lB, resolveComponent as de, resolveDirective as gB, openBlock as se, createBlock as qe, Teleport as hB, withDirectives as fB, createElementBlock as xe, normalizeClass as nn, normalizeStyle as Ke, createElementVNode as ce, createVNode as re, withModifiers as Ce, withCtx as pe, createCommentVNode as nt, toDisplayString as dB, unref as an, Fragment as Qa, createTextVNode as pB, vShow as IB, nextTick as vB } from "vue";
 const Na = {
   "application/prs.cww": ["cww"],
   "application/prs.xsf+xml": ["xsf"],
@@ -1318,10 +1318,10 @@ var t={4186:(t,e,r)=>{var n=r(3749),i=r(8055),a=TypeError;t.exports=function(t){
       return i;
     }
     var he = Ae;
-    function X() {
+    function Z() {
       this.__data__ = [], this.size = 0;
     }
-    var ue = X;
+    var ue = Z;
     function ar(e, t) {
       return e === t || e !== e && t !== t;
     }
@@ -1373,10 +1373,10 @@ var t={4186:(t,e,r)=>{var n=r(3749),i=r(8055),a=TypeError;t.exports=function(t){
       return this.size = t.size, r;
     }
     var w = Q;
-    function Z(e) {
+    function V(e) {
       return this.__data__.get(e);
     }
-    var te = Z;
+    var te = V;
     function Se(e) {
       return this.__data__.has(e);
     }
@@ -3158,8 +3158,8 @@ function tE(A, d, g) {
     return B = P, v = setTimeout(D, d), E ? x(P) : I;
   }
   function f(P) {
-    var Ae = P - R, he = P - B, X = d - Ae;
-    return y ? eE(X, h - he) : X;
+    var Ae = P - R, he = P - B, Z = d - Ae;
+    return y ? eE(Z, h - he) : Z;
   }
   function m(P) {
     var Ae = P - R, he = P - B;
@@ -3900,17 +3900,18 @@ const Da = /* @__PURE__ */ Ma(rE), nE = { class: "file-viewer-container" }, iE =
     fileList: { default: () => [] },
     initialIndex: { default: 0 },
     teleport: { type: Boolean, default: !0 },
-    customFileViewer: {}
+    customFileViewer: {},
+    customDownload: {}
   },
   emits: ["close"],
   setup(A, { expose: d, emit: g }) {
-    const o = A, u = g, h = V(o.initialIndex), I = V(1), v = V(0), R = V(0), B = V(0), E = V(0), y = V(0), l = V({ x: 0, y: 0 }), x = V({ width: 500, height: 500 }), U = V(!1), f = V(""), m = V(0), D = V(0), G = V(!1), N = V(!1), oe = V(1), ee = V(!1), P = V(1), Ae = V(null), he = V(null), X = dt(() => o.fileList[h.value]), ue = dt(() => {
+    const o = A, u = g, h = X(o.initialIndex), I = X(1), v = X(0), R = X(0), B = X(0), E = X(0), y = X(0), l = X({ x: 0, y: 0 }), x = X({ width: 500, height: 500 }), U = X(!1), f = X(""), m = X(0), D = X(0), G = X(!1), N = X(!1), oe = X(1), ee = X(!1), P = X(1), Ae = X(null), he = X(null), Z = dt(() => o.fileList[h.value]), ue = dt(() => {
       const Q = o.fileList[h.value];
       return Q ? bB(Q.url) : "";
     }), ar = dt(() => {
       var Q;
-      return (Q = X.value) != null && Q.url ? o.customFileViewer ? o.customFileViewer(X.value) : `https://rms.fmyd888.com/h5/static/web/pdfview/web/viewer.html?file=${encodeURIComponent(
-        X.value.url
+      return (Q = Z.value) != null && Q.url ? o.customFileViewer ? o.customFileViewer(Z.value) : `https://rms.fmyd888.com/h5/static/web/pdfview/web/viewer.html?file=${encodeURIComponent(
+        Z.value.url
       )}` : "";
     });
     ma(
@@ -3925,14 +3926,14 @@ const Da = /* @__PURE__ */ Ma(rE), nE = { class: "file-viewer-container" }, iE =
       },
       { deep: !0 }
     );
-    const at = dt(() => P.value >= 1 && P.value <= 7 || P.value < 0.3 ? 100 * I.value + "%" : "auto"), or = dt(() => P.value < 1 && P.value >= 0.3 || P.value > 7 ? 100 * I.value + "%" : "auto"), vt = V("0px 0px"), _e = () => {
+    const at = dt(() => P.value >= 1 && P.value <= 7 || P.value < 0.3 ? 100 * I.value + "%" : "auto"), or = dt(() => P.value < 1 && P.value >= 0.3 || P.value > 7 ? 100 * I.value + "%" : "auto"), vt = X("0px 0px"), _e = () => {
       h.value = o.initialIndex, N.value = !1;
       const Q = localStorage.getItem("lb-file-viewer/his");
       let w = null;
       try {
         Q && (w = JSON.parse(Q));
-      } catch (Z) {
-        console.error(Z);
+      } catch (V) {
+        console.error(V);
       }
       w && w.position ? l.value = {
         x: w.position.x < 0 ? 0 : w.position.x,
@@ -3949,11 +3950,11 @@ const Da = /* @__PURE__ */ Ma(rE), nE = { class: "file-viewer-container" }, iE =
     }, Et = () => {
       I.value > 0.1 && I.value - 0.1 > 0.1 ? I.value -= 0.1 : (I.value = 0.1, R.value = 0, B.value = 0);
     }, Ar = () => {
-      let Q = 0, w = 0, Z = 0;
-      he.value ? Q = he.value.offsetHeight : Q = 0, Ae.value ? (w = Ae.value.offsetWidth, Z = Ae.value.offsetHeight) : (w = 0, Z = 0);
+      let Q = 0, w = 0, V = 0;
+      he.value ? Q = he.value.offsetHeight : Q = 0, Ae.value ? (w = Ae.value.offsetWidth, V = Ae.value.offsetHeight) : (w = 0, V = 0);
       const te = Math.ceil(w / 2);
       let Se = 0;
-      Q < Z ? Se = Math.ceil(Q / 2) : Se = Math.ceil(Z / 2), vt.value = `${te}px ${Se}px`;
+      Q < V ? Se = Math.ceil(Q / 2) : Se = Math.ceil(V / 2), vt.value = `${te}px ${Se}px`;
     }, sr = () => {
       I.value = 1, vB(() => {
         Ar(), v.value === 270 ? v.value = 0 : v.value += 90, m.value = 0, D.value = 0;
@@ -3967,8 +3968,8 @@ const Da = /* @__PURE__ */ Ma(rE), nE = { class: "file-viewer-container" }, iE =
     }, Qt = (Q) => {
       if (N.value)
         return;
-      const w = Q.clientX - E.value, Z = Q.clientY - y.value;
-      w > 0 && (l.value.x = w), Z > 0 && (l.value.y = Z);
+      const w = Q.clientX - E.value, V = Q.clientY - y.value;
+      w > 0 && (l.value.x = w), V > 0 && (l.value.y = V);
     }, bt = (Q) => {
       N.value || (document.removeEventListener("pointermove", Qt), document.removeEventListener("pointerup", bt), Ze.releasePointerCapture(Q.pointerId), localStorage.setItem(
         "lb-file-viewer/his",
@@ -3981,16 +3982,16 @@ const Da = /* @__PURE__ */ Ma(rE), nE = { class: "file-viewer-container" }, iE =
       w.stopPropagation(), U.value = !0, f.value = Q, document.addEventListener("mousemove", wt), document.addEventListener("mouseup", kt);
     }, wt = (Q) => {
       if (U.value) {
-        const w = Q.clientX - l.value.x, Z = Q.clientY - l.value.y;
+        const w = Q.clientX - l.value.x, V = Q.clientY - l.value.y;
         switch (f.value) {
           case "top":
-            l.value.y = Q.clientY, x.value.height = Math.max(300, x.value.height - Z), document.body.style.cursor = "ns-resize";
+            l.value.y = Q.clientY, x.value.height = Math.max(300, x.value.height - V), document.body.style.cursor = "ns-resize";
             break;
           case "right":
             x.value.width = Math.max(400, w), document.body.style.cursor = "ew-resize";
             break;
           case "bottom":
-            x.value.height = Math.max(300, Z), document.body.style.cursor = "ns-resize";
+            x.value.height = Math.max(300, V), document.body.style.cursor = "ns-resize";
             break;
           case "left":
             l.value.x = Q.clientX, x.value.width = Math.max(400, x.value.width - w), document.body.style.cursor = "ew-resize";
@@ -4005,7 +4006,7 @@ const Da = /* @__PURE__ */ Ma(rE), nE = { class: "file-viewer-container" }, iE =
           size: x.value
         })
       );
-    }, xt = V({
+    }, xt = X({
       startX: 0,
       startY: 0,
       startDragX: 0,
@@ -4021,7 +4022,7 @@ const Da = /* @__PURE__ */ Ma(rE), nE = { class: "file-viewer-container" }, iE =
       };
     }, lr = (Q) => {
       if (Q.stopPropagation(), G.value) {
-        const { startX: w, startY: Z, startDragX: te, startDragY: Se, rotate: De } = xt.value, Oe = Q.clientX - w, Fe = Q.clientY - Z;
+        const { startX: w, startY: V, startDragX: te, startDragY: Se, rotate: De } = xt.value, Oe = Q.clientX - w, Fe = Q.clientY - V;
         let Re = 0, Ne = 0;
         switch (De) {
           case 0:
@@ -4051,24 +4052,27 @@ const Da = /* @__PURE__ */ Ma(rE), nE = { class: "file-viewer-container" }, iE =
     }, gr = () => {
       var Q;
       if (ue.value === "image") {
-        if (!((Q = X.value) != null && Q.url))
+        if (!((Q = Z.value) != null && Q.url))
           return;
-        Da(X.value.url, "image");
+        Da(Z.value.url, "image");
       } else
-        ue.value === "docOpen" ? Da(X.value.url) : ue.value === "office" && alert("暂时不支持打印，请下载后打印");
+        ue.value === "docOpen" ? Da(Z.value.url) : ue.value === "office" && alert("暂时不支持打印，请下载后打印");
     }, Dt = () => {
       var w;
-      if (ee.value || !((w = X.value) != null && w.url))
+      if (ee.value || !((w = Z.value) != null && w.url))
         return;
-      let Q = X.value.name;
+      let Q = Z.value.name;
       if (!Q) {
-        const Z = X.value.url.lastIndexOf("/");
-        Q = X.value.url.slice(Z + 1);
+        const V = Z.value.url.lastIndexOf("/");
+        Q = Z.value.url.slice(V + 1);
       }
-      ee.value = !0, BB.common(X.value.url, Q), ee.value = !1;
+      ee.value = !0, o.customDownload ? o.customDownload({
+        url: Z.value.url,
+        name: Q
+      }) : BB.common(Z.value.url, Q), ee.value = !1;
     }, hr = (Q) => {
-      const w = Q.target, Z = w.naturalWidth, te = w.naturalHeight;
-      P.value = Z / te;
+      const w = Q.target, V = w.naturalWidth, te = w.naturalHeight;
+      P.value = V / te;
     };
     return lB(() => {
       Ze = document.getElementById("fm-file-view-name"), Ze.addEventListener("pointerdown", cr);
@@ -4078,7 +4082,7 @@ const Da = /* @__PURE__ */ Ma(rE), nE = { class: "file-viewer-container" }, iE =
       prevFile: Qe
     }), (Q, w) => {
       var st, Rt, Nt, Te, Lt;
-      const Z = de("Back"), te = de("el-icon"), Se = de("Right"), De = de("ZoomOut"), Oe = de("ZoomIn"), Fe = de("RefreshRight"), Re = de("Printer"), Ne = de("Download"), Le = de("FullScreen"), ne = de("Close"), At = de("el-button"), fr = de("ArrowLeft"), Pe = de("ArrowRight"), Ft = gB("loading");
+      const V = de("Back"), te = de("el-icon"), Se = de("Right"), De = de("ZoomOut"), Oe = de("ZoomIn"), Fe = de("RefreshRight"), Re = de("Printer"), Ne = de("Download"), Le = de("FullScreen"), ne = de("Close"), At = de("el-button"), fr = de("ArrowLeft"), Pe = de("ArrowRight"), Ft = gB("loading");
       return se(), qe(hB, {
         to: "body",
         disabled: o.teleport
@@ -4123,7 +4127,7 @@ const Da = /* @__PURE__ */ Ma(rE), nE = { class: "file-viewer-container" }, iE =
                   onClick: Ce(Qe, ["stop"])
                 }, {
                   default: pe(() => [
-                    re(Z)
+                    re(V)
                   ]),
                   _: 1
                 }, 8, ["color", "style"]),
@@ -4180,7 +4184,7 @@ const Da = /* @__PURE__ */ Ma(rE), nE = { class: "file-viewer-container" }, iE =
                   _: 1
                 })) : nt("", !0)
               ]),
-              ce("div", aE, dB((st = X.value) == null ? void 0 : st.name), 1),
+              ce("div", aE, dB((st = Z.value) == null ? void 0 : st.name), 1),
               ce("div", oE, [
                 re(te, {
                   class: "btn",
@@ -4257,7 +4261,7 @@ const Da = /* @__PURE__ */ Ma(rE), nE = { class: "file-viewer-container" }, iE =
                 key: 0,
                 ref_key: "imageRef",
                 ref: Ae,
-                src: (Rt = X.value) == null ? void 0 : Rt.url,
+                src: (Rt = Z.value) == null ? void 0 : Rt.url,
                 style: Ke({
                   height: or.value,
                   width: at.value,
@@ -4281,7 +4285,7 @@ const Da = /* @__PURE__ */ Ma(rE), nE = { class: "file-viewer-container" }, iE =
                   ue.value === "docOpen" ? (se(), xe("div", uE, [
                     (se(), qe(an(QB), {
                       key: oe.value,
-                      src: (Nt = X.value) == null ? void 0 : Nt.url,
+                      src: (Nt = Z.value) == null ? void 0 : Nt.url,
                       style: Ke(`transform: scale(${I.value});transform-origin: 50% 0%;height: 100%`)
                     }, null, 8, ["src", "style"]))
                   ])) : ue.value === "office" ? (se(), xe("div", lE, [
@@ -4292,11 +4296,11 @@ const Da = /* @__PURE__ */ Ma(rE), nE = { class: "file-viewer-container" }, iE =
                         "transform-origin": "50% 0%"
                       }),
                       class: "iframe-viewer",
-                      src: "https://view.officeapps.live.com/op/view.aspx?src=" + ((Te = X.value) == null ? void 0 : Te.url)
+                      src: "https://view.officeapps.live.com/op/view.aspx?src=" + ((Te = Z.value) == null ? void 0 : Te.url)
                     }, null, 12, gE))
                   ])) : ue.value === "video" ? (se(), xe("video", {
                     key: 2,
-                    src: (Lt = X.value) == null ? void 0 : Lt.url,
+                    src: (Lt = Z.value) == null ? void 0 : Lt.url,
                     class: "video-viewer",
                     controls: "true"
                   }, null, 8, hE)) : (se(), xe("div", fE, [
@@ -4363,7 +4367,7 @@ const vE = (A, d) => {
   for (const [o, u] of d)
     g[o] = u;
   return g;
-}, yE = /* @__PURE__ */ vE(IE, [["__scopeId", "data-v-ae5a67bc"]]), CE = (A, d) => {
+}, yE = /* @__PURE__ */ vE(IE, [["__scopeId", "data-v-4a0aa086"]]), CE = (A, d) => {
   if (A.install = (g) => {
     for (const o of [A, ...Object.values(d ?? {})])
       g.component(o.name, o);

@@ -39,6 +39,10 @@ export interface LbFileViewerOptions {
      * 自定义文件查看器函数
      */
     customFileViewer?: Function;
+    /**
+     * 自定义文件下载函数
+     */
+    customDownload?: Function;
 }
 /**
  * LbFileViewer组件实例接口
